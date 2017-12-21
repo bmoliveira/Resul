@@ -1,0 +1,28 @@
+fastlane_version "2.68.2"
+
+default_platform :android
+
+platform :android do
+  desc "Runs all the tests"
+  lane :test do
+    gradle(task: "test")
+  end
+
+  desc "Upload RxKotlinResult"
+  lane :release_rx_kotlin_result do
+    gradle(task: ":result:install")
+    gradle(task: ":result:bintrayUpload")
+  end
+
+  desc "Upload RxKotlinResult Extensions"
+    lane :release_rx_kotlin_result_extensions do
+      gradle(task: ":result-extensions:install")
+      gradle(task: ":result-extensions:bintrayUpload")
+    end
+
+  desc "Deploy all libs to maven"
+  lane :deploy do
+    release_rx_kotlin_result
+    release_rx_kotlin_result_extensions
+  end
+end
