@@ -5,42 +5,52 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: Verifying required fastlane version" time="0.010183">
+      <testcase classname="fastlane.lanes" name="0: Verifying required fastlane version" time="0.006347">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.002283">
+      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.003194">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: Switch to android release_rx_kotlin_result lane" time="0.001185">
+      <testcase classname="fastlane.lanes" name="2: Switch to android release_rx_kotlin_result lane" time="0.001202">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: gradle" time="3.224535">
+      <testcase classname="fastlane.lanes" name="3: gradle" time="1.386854">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="4: gradle" time="5.646387">
+      <testcase classname="fastlane.lanes" name="4: gradle" time="2.352489">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="5: Switch to android release_rx_kotlin_result_extensions lane" time="0.002292">
+      <testcase classname="fastlane.lanes" name="5: gradle" time="4.688019">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="6: gradle" time="2.937726">
+      <testcase classname="fastlane.lanes" name="6: Switch to android release_rx_kotlin_result_extensions lane" time="0.00148">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="7: gradle" time="5.200546">
+      <testcase classname="fastlane.lanes" name="7: gradle" time="1.219759">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="8: gradle" time="2.674431">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="9: gradle" time="4.862742">
         
       </testcase>
     

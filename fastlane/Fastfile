@@ -10,12 +10,14 @@ platform :android do
 
   desc "Upload RxKotlinResult"
   lane :release_rx_kotlin_result do
+    gradle(task: "clean")
     gradle(task: ":result:install")
     gradle(task: ":result:bintrayUpload")
   end
 
   desc "Upload RxKotlinResult Extensions"
     lane :release_rx_kotlin_result_extensions do
+      gradle(task: "clean")
       gradle(task: ":result-extensions:install")
       gradle(task: ":result-extensions:bintrayUpload")
     end

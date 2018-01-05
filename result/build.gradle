@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply from: '../common-dependencies.gradle'
+apply from: 'https://gist.githubusercontent.com/bmoliveira/3d9c28aaaa737aba9ad5fd894603395b/raw/48c34ade38f142ec11325579d9c9cffc63586194/bintray-deploy.gradle'
 
 android {
   compileSdkVersion libTargetSdk
@@ -8,8 +9,6 @@ android {
   defaultConfig {
     minSdkVersion 19
     targetSdkVersion libTargetSdk
-    versionCode libVersionCode
-    versionName libVersion
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
   }
 
@@ -23,46 +22,3 @@ android {
 
 dependencies {
 }
-
-apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'com.jfrog.bintray'
-
-def libArtifactId = "result"
-
-version = libVersion
-group = groupId
-
-Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
-
-//take a look at https://github.com/bintray/gradle-bintray-plugin#buildgradle
-bintray {
-  user = properties.getProperty("bintray.user")
-  key = properties.getProperty("bintray.apikey")
-
-  configurations = ['archives']
-  publish = true //[Default: false] Whether version should be auto published after an upload
-  override = false //[Default: false] Whether to override version artifacts already published
-
-  pkg {
-    repo = mavenRepo
-    name = libArtifactId
-    version {
-      name = libVersion
-    }
-  }
-}
-
-install {
-  repositories.mavenInstaller {
-    pom.project {
-      packaging 'aar'
-      groupId groupId
-      artifactId libArtifactId
-      version libVersion
-      name libArtifactId
-    }
-  }
-}
-
-apply from: '../deploy-tasks.gradle'

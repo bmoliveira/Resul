@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/RxKotlinResult.iml" filepath="$PROJECT_DIR$/RxKotlinResult.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/result/result.iml" filepath="$PROJECT_DIR$/result/result.iml" />
       <module fileurl="file://$PROJECT_DIR$/result-extensions/result-extensions.iml" filepath="$PROJECT_DIR$/result-extensions/result-extensions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rx-kotlin-result.iml" filepath="$PROJECT_DIR$/rx-kotlin-result.iml" />
     </modules>
   </component>
 </project>

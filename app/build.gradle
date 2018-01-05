@@ -9,8 +9,8 @@ android {
     applicationId "com.broliveira.example.result"
     minSdkVersion 19
     targetSdkVersion libTargetSdk
-    versionCode libVersionCode
-    versionName libVersion
+    versionCode 0
+    versionName "0"
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
   }
   buildTypes {
